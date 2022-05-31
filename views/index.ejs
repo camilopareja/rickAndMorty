@@ -1,11 +1,56 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<%- include('./partials/head.ejs', {
+  css: "index",
+  title: "Rick and Morty"
+}) %>
+
+<body>
+  <%- include('./partials/header.ejs') %>
+  <main>
+    <div class="contenedorPrimeraSeccion">   
+      <!-- Se agrego un background con css utilizando esta sección -->
+    </div>   
+    <div class="opcionesPagina">
+      <div class="botonPersonajes"> 
+        <button class="buttonMain">
+          <a href="/characters">
+            Descubre tus personajes favoritos
+          </a>
+        </button>
+      </div>
+      <div class="randomCharacter">
+          <img class="imagenPersonaje" src="/images/rick-morty-samurai-index-image.jpg" alt="personaje" >
+          <div class="infoPersonaje">
+            <div class="section">
+              <h1>
+                <a href="/character">
+                  Rick Sanchez
+                </a>
+              </h1>
+              <p>
+                alive - human
+              </p>
+            </div>
+            <div class="section">
+              <h4>
+                last known location:
+              </h4>
+              <p>
+                Earth
+              </p>
+            </div>
+            <div class="section">
+              <h4>
+                First seen in:
+              </h4>
+              <p>
+                The first chapter
+              </p>
+            </div>
+          </div>
+      </div>
+
+    </div>
+  </main>
+  <footer></footer>
+</body>
 </html>
